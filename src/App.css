@@ -1,5 +1,14 @@
+* {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: white;
+}
+body {
+  background-color: #000000;
+}
 .App {
   text-align: center;
+  /* font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; */
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 .App-logo {
@@ -35,4 +44,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+.letter-spacing-14 {
+  letter-spacing: -14px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.uppercase {
+  text-transform: uppercase;
 }

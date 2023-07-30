@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Home from "./Screens/Home/Home";
+import WhoAmI from "./Screens/WhoAmI/WhoAmI";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollSmoother from "gsap/ScrollSmoother";
+import { useEffect, useLayoutEffect } from "react";
+import './utils/fonts.css'
 
 function App() {
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+  //   useEffect(() => {
+  //     const interval = setInterval(() => {
+  //       console.log('This will run every second!');
+  //     }, 1000);
+  //     return () => clearInterval(interval);
+  //   }, [project]);
+
+  // useLayoutEffect(() => {
+  //   let context = gsap.context(() => {
+  //     ScrollSmoother.create({
+  //       smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
+  //       effects: true, // looks for data-speed and data-lag attributes on elements
+  //       content: "#smooth-content",
+  //       smoothTouch: 1,
+  //     });
+  //   });
+  //   return () => context.revert();
+  // }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <div id="smooth-content"> */}
+      <Home />
+      {/* <WhoAmI /> */}
+      {/* </div> */}
+    </>
   );
 }
 

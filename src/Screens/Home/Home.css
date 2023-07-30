@@ -1,0 +1,553 @@
+.home-section {
+  background-color: #000000;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  margin-bottom: 100px;
+}
+.antonin {
+  font-size: 300px;
+}
+.scroll-div {
+  position: absolute;
+  bottom: 0;
+  height: 30vh;
+  width: max-content;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.scroll-indicator {
+  width: 22px;
+  height: 22px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  /* position: relative; */
+  animation: scrollAnimation 2s ease infinite;
+  margin-bottom: 50px;
+}
+
+@keyframes scrollAnimation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(
+      20px
+    ); /* Ajustez la valeur pour définir l'amplitude de l'effet de scroll */
+  }
+}
+
+.starBlue {
+  width: 52px;
+  height: 53px;
+  position: absolute;
+  left: 320px;
+  top: 380px;
+  animation: rotateAnimation 7s linear infinite;
+}
+.starPink {
+  width: 52px;
+  height: 53px;
+  position: absolute;
+  left: 420px;
+  top: 300px;
+  animation: rotateAnimation 10s linear infinite reverse;
+}
+.starYellow {
+  width: 52px;
+  height: 54px;
+  position: absolute;
+  right: 300px;
+  top: 400px;
+  animation: rotateAnimation 8s linear infinite;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+/* .blur {
+  filter: blur(0px);
+} */
+.slider {
+  position: absolute;
+  /* background-color: #ff7b7b; */
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.big-letter {
+  font-size: 300px;
+}
+.italic {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.who-am-i2 {
+  background-color: #459cd5;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+}
+.who-am-i3 {
+  background-color: #5f27b4;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+}
+.who-am-i {
+  /* margin-top: 100px; */
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  top: 0;
+  display: flex;
+}
+.text-container {
+  width: 50vw;
+}
+.title-container {
+  margin-left: 75px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.whoami-text {
+  font-size: 200px;
+  font-weight: 400;
+  letter-spacing: -10px;
+  padding: 0rem;
+
+  display: inline-block;
+  vertical-align: top;
+  height: 0.8em;
+  line-height: 0.8em;
+}
+.whoami-marks {
+  font-size: 130px;
+  font-weight: 400;
+  letter-spacing: -10px;
+  margin-top: -200px;
+  z-index: -1;
+}
+.whoami-mark {
+  filter: blur(2px);
+}
+.description-container {
+  margin-left: 75px;
+  margin-top: 200px;
+  display: flex;
+  width: 350px;
+  justify-content: space-between;
+  font-size: 70px;
+  font-weight: 400;
+  letter-spacing: -3.5px;
+  overflow: hidden;
+}
+.description-age {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -1.5px;
+  align-self: flex-end;
+  margin-left: 30px;
+}
+.description-text-container {
+  margin-left: 75px;
+  margin-top: 60px;
+  width: 720px;
+  text-align: justify;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: -1.25px;
+  overflow: hidden;
+  /* height: 100px; */
+}
+.description-container > span {
+  position: relative;
+  top: 150px;
+}
+.description-text-container > span {
+  position: relative;
+  top: 150px;
+  display: none;
+}
+.img-container {
+  width: 50vw;
+  height: "100%";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-who-am-i {
+  position: absolute;
+  width: 498px;
+  height: 666px;
+  flex-shrink: 0;
+  border-radius: 34px;
+  background-position: center !important;
+  opacity: 0;
+}
+.img-antonin {
+  background: url("../../assets/img/antonin.jpeg") lightgray 50% / cover
+    no-repeat;
+  transform: scale(1.2) rotate(2.4deg);
+}
+.img-developer {
+  background: url("../../assets/img/developper.jpg"),
+    lightgray 50% / cover no-repeat;
+  transform: scale(1.2) rotate(-5.14deg);
+  /* z-index: 50; */
+}
+.img-basketball {
+  background: url("../../assets/img/basketball.jpg"),
+    lightgray 50% / cover no-repeat;
+  transform: scale(1.2) rotate(4.3deg);
+  /* z-index: 100; */
+}
+
+/* ---------------- Skills CSS ---------------- */
+.display-skills {
+  display: flex;
+}
+.skills-section {
+  padding: 75px;
+}
+.skills-section-title {
+  font-size: 100px;
+  font-weight: 400;
+  letter-spacing: -3.5px;
+}
+.skills-section-subtitle {
+  font-size: 30px;
+  font-weight: 200;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.skill-container {
+  display: flex;
+  /* flex-direction: column; */
+  width: 920px;
+}
+.name-skill-title {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  width: 320px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.description-skill-title {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  width: 320px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.skill-cell-name {
+  width: 320px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  /* border: #459cd5 solid 2px; */
+  font-size: 25px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.skill-cell-descr {
+  width: 600px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  /* border: #459cd5 solid 2px; */
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0px;
+}
+.skill-separator {
+  background-color: white;
+  height: 1px;
+  width: 920px;
+}
+.skill-img-container {
+  height: 70vh;
+  width: calc(100vw - 920px - 75px - 75px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skill-img {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  opacity: 0;
+}
+
+/* ---------------- Projects CSS ---------------- */
+.projets-section {
+  padding: 75px;
+}
+.projects-section-title {
+  font-size: 100px;
+  font-weight: 400;
+  letter-spacing: -3.5px;
+}
+.project-container {
+  display: flex;
+}
+.project-container:not(:first-child) {
+  margin-top: 150px; /* Remplacez la valeur "20px" par la marge souhaitée */
+}
+.project-container:last-child {
+  margin-bottom: 200px;
+}
+.project-texts {
+  display: flex;
+  flex-direction: column;
+  width: 45vw;
+  margin-right: 75px;
+}
+.project-year {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -0.75px;
+}
+.project-name {
+  font-size: 80px;
+  font-weight: 400;
+  letter-spacing: -3.5px;
+  margin-top: 25px;
+}
+.project-description {
+  text-align: justify;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: -1.25px;
+  margin-top: 50px;
+}
+.project-img {
+  width: 55vw;
+  padding: 0 30px 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-img > img {
+  max-width: 100%;
+  border-radius: 7px;
+}
+
+/* -------- GITHUB --------- */
+.github-section {
+  height: 100vh;
+  background-color: white;
+  overflow: hidden;
+}
+.github-text-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.visit-my {
+  text-align: center;
+  font-size: 230px;
+  font-weight: 400;
+  -webkit-text-stroke: 4px rgb(0, 0, 0);
+  text-stroke: 4px rgb(0, 0, 0);
+  height: 0.8em;
+  line-height: 0.8em;
+  transform: scale(3);
+}
+.github-title {
+  color: #000000;
+  text-align: center;
+  font-size: 230px;
+  font-weight: 400;
+  letter-spacing: -11.5px;
+  height: 0.8em;
+  line-height: 0.8em;
+}
+.visit-texts {
+  text-align: center;
+  transform: scale(3.2);
+  margin-top: 230px;
+}
+.catch-it {
+  color: #000;
+  text-align: center;
+  font-family: Junicode;
+  font-size: 55px;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 1.65px;
+  margin-bottom: 50px;
+  opacity: 0;
+}
+.button-visit {
+  color: #000;
+  border-radius: 59px;
+  border: 3px solid #000;
+  width: 263px;
+  height: 93px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  transition: 0.25s ease;
+  opacity: 0;
+}
+.button-visit:hover {
+  background-color: #000;
+  color: white;
+}
+.damier-container {
+  position: absolute;
+  height: 40vh;
+  width: 110vw;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+}
+.damier-container > img {
+  height: 100%;
+}
+.black-stars {
+  width: 40px;
+  height: 40px;
+  animation: rotateAnimation 8s linear infinite;
+  opacity: 0;
+}
+.big-star-container {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  top: 0;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.big-star {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Les propriétés top et left à 50% placent le coin supérieur gauche de l'image
+     au milieu du parent. La propriété transform avec translate(-50%, -50%)
+     déplace l'image de moitié de sa largeur et moitié de sa hauteur vers la gauche et le haut,
+     ce qui la centre correctement dans son parent. */
+  max-width: 100%;
+  max-height: 100%;
+  transform: translate(-50%, -50%) scale(0) rotate(0);
+}
+.conclusion {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.conclusion-title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 140px;
+  font-weight: 400;
+  letter-spacing: -7px;
+  margin-top: 100px;
+}
+.conclusion-title > span {
+  height: 0.8em;
+  line-height: 0.8em;
+}
+.conclusion-subtitle {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 100px;
+}
+.button-email {
+  color: #ffffff;
+  border-radius: 59px;
+  border: 3px solid #ffffff;
+  width: 263px;
+  height: 93px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  transition: 0.25s ease;
+}
+.button-email:hover {
+  background-color: #ffffff;
+  color: black;
+}
+.bottom-navbar {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 0 100px;
+}
+.bottom-links {
+  margin: 0 20px;
+  text-decoration: none;
+}
+.absolute {
+  position: absolute;
+}
+.concl-antonin {
+  border-radius: 34px;
+  width: 403.143px;
+  height: 502.035px;
+  top: -380px;
+  left: -280px;
+  transform: rotate(11.426deg);
+}
+.concl-wtn {
+  width: 190px;
+  height: 190px;
+  top: -200px;
+  left: 800px;
+  transform: rotate(-11.426deg);
+}
+.concl-arosaje {
+  border-radius: 34px;
+  width: 743px;
+  height: 613px;
+  top: -260px;
+  right: -900px;
+  transform: rotate(-11.426deg);
+}
