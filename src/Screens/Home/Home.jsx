@@ -1,5 +1,6 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
-import "./Home.css";
+import "./Home-Desktop.css";
+import "./Home-Mobile.css";
 import starBlue from "../../assets/img/star-blue.png";
 import starPink from "../../assets/img/star-pink.png";
 import starYellow from "../../assets/img/star-yellow.png";
@@ -290,11 +291,11 @@ const Home = () => {
       </div>
 
       {/* <WhoAmI /> */}
-      <div id="whoAmI" className="who-am-i">
+      <section id="whoAmI" className="who-am-i">
         <div className="text-container">
           <div className="title-container">
             <span className="whoami-text uppercase">Who</span>
-            <span className="whoami-text uppercase" style={{ marginLeft: 140 }}>
+            <span className="whoami-text uppercase">
               am I ?
             </span>
             <div className="whoami-marks uppercase">
@@ -340,7 +341,7 @@ const Home = () => {
           <div className="img-who-am-i img-developer"></div>
           <div className="img-who-am-i img-basketball"></div>
         </div>
-      </div>
+      </section>
 
       {/* ----------------- */}
 
@@ -515,7 +516,7 @@ const Home = () => {
               alt=""
             />
           </a>
-          <div className="project-texts" style={{ marginLeft: 60 }}>
+          <div className="project-texts">
             <span className="project-year">2022</span>
             <span className="project-name">C.A.V.E</span>
             <span className="project-description">
@@ -582,47 +583,79 @@ const Home = () => {
         </div>
 
         <img
-          className="black-stars"
+          className="black-stars star-desktop"
           style={{ position: "absolute", left: 400, top: 40 }}
           src={require("../../assets/img/star-black-small.png")}
           alt=""
         />
         <img
-          className="black-stars"
+          className="black-stars star-desktop"
           style={{ position: "absolute", right: 70, top: 80 }}
           src={require("../../assets/img/star-black-small.png")}
           alt=""
         />
         <img
-          className="black-stars"
+          className="black-stars star-desktop"
           style={{ position: "absolute", right: 150, bottom: 130 }}
           src={require("../../assets/img/star-black-small.png")}
           alt=""
         />
         <img
-          className="black-stars"
+          className="black-stars star-desktop"
           style={{ position: "absolute", right: 400, bottom: 100 }}
           src={require("../../assets/img/star-black-small.png")}
           alt=""
         />
         <img
-          className="black-stars"
+          className="black-stars star-desktop"
           style={{ position: "absolute", left: 300, bottom: 80 }}
           src={require("../../assets/img/star-black-small.png")}
           alt=""
         />
         <img
-          className="black-stars"
+          className="black-stars star-desktop"
           style={{ position: "absolute", left: 114, bottom: 230 }}
           src={require("../../assets/img/star-black-small.png")}
           alt=""
         />
         <img
-          className="black-stars"
+          className="black-stars star-desktop"
           style={{ position: "absolute", left: 80, top: 119 }}
           src={require("../../assets/img/star-black-small.png")}
           alt=""
         />
+
+        {/* STAR MOBILE */}
+        <img
+          className="black-stars star-mobile"
+          style={{ position: "absolute", left: 80, top: 119 }}
+          src={require("../../assets/img/star-black-small.png")}
+          alt=""
+        />
+        <img
+          className="black-stars star-mobile"
+          style={{ position: "absolute", right: 80, top: 89 }}
+          src={require("../../assets/img/star-black-small.png")}
+          alt=""
+        />
+        <img
+          className="black-stars star-mobile"
+          style={{ position: "absolute", left: 120, top: 530 }}
+          src={require("../../assets/img/star-black-small.png")}
+          alt=""
+        />
+        <img
+          className="black-stars star-mobile"
+          style={{ position: "absolute", right: 80, bottom: 80 }}
+          src={require("../../assets/img/star-black-small.png")}
+          alt=""
+        />
+        {/* <img
+          className="black-stars star-mobile"
+          style={{ position: "absolute", left: 80, top: 119 }}
+          src={require("../../assets/img/star-black-small.png")}
+          alt=""
+        /> */}
         <img className="big-star" src={starSVG} alt="" />
       </div>
 
