@@ -196,7 +196,6 @@
     justify-content: center;
     align-items: center;
     order: 2;
-    border: solid 2px red;
   }
   .img-who-am-i {
     position: absolute;
@@ -557,6 +556,9 @@
     top: -200px;
     left: 800px;
     transform: rotate(-11.426deg);
+  }
+  .concl-wtn-mobile {
+    display: none;
   }
   .concl-arosaje {
     border-radius: 34px;

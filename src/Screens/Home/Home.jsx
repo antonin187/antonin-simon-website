@@ -158,6 +158,9 @@ const Home = () => {
         })
         .to(".concl-wtn", {
           top: "-60px",
+        })
+        .to(".concl-wtn-mobile", {
+          top: "100px",
         });
     }, section); // <- Scope!
     return () => ctx.revert();
@@ -678,123 +681,123 @@ const Home = () => {
         {/* Colors stars */}
         <img
           src={require("../../assets/img/star-pink.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 52, height: 52, top: 330, right: 475 }}
         />
         <img
           src={require("../../assets/img/star-pink.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 52, height: 52, top: 360, left: 560 }}
         />
         <img
           src={require("../../assets/img/star-blue.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 52, height: 52, top: 524, left: 360 }}
         />
         <img
           src={require("../../assets/img/star-blue.png")}
-          className="absolute"
-          style={{ width: 52, height: 52, top: 620, left: 1020 }}
+          className="absolute stars-concl"
+          style={{ width: 52, height: 52, top: 600, left: 1020 }}
         />
         <img
           src={require("../../assets/img/star-yellow.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 52, height: 52, top: 220, left: 450 }}
         />
         <img
           src={require("../../assets/img/star-yellow.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 52, height: 52, top: 600, right: 440 }}
         />
 
         {/* White stars big */}
         <img
           src={require("../../assets/img/star-white-no-outline.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 15, height: 15, top: 296, left: 348 }}
         />
         <img
           src={require("../../assets/img/star-white-no-outline.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 15, height: 15, top: 320, left: 400 }}
         />
         <img
           src={require("../../assets/img/star-white-no-outline.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 15, height: 15, top: 400, right: 440 }}
         />
         <img
           src={require("../../assets/img/star-white-no-outline.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 15, height: 15, bottom: 300, right: 520 }}
         />
 
         <img
           src={require("../../assets/img/star-white-no-outline.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 15, height: 15, top: 720, left: 440 }}
         />
 
         {/* White stars small */}
         <img
           src={require("../../assets/img/star-white-no-outline.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 10, height: 10, top: 230, left: 440 }}
         />
         <img
           src={require("../../assets/img/star-white-no-outline.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 10, height: 10, top: 200, left: 900 }}
         />
         <img
           src={require("../../assets/img/star-white-no-outline.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 10, height: 10, top: 510, right: 710 }}
         />
         <img
           src={require("../../assets/img/star-white-no-outline.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 10, height: 10, top: 440, right: 470 }}
         />
         <img
           src={require("../../assets/img/star-white-no-outline.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 10, height: 10, top: 650, right: 550 }}
         />
         <img
           src={require("../../assets/img/star-white-no-outline.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 10, height: 10, top: 220, right: 190 }}
         />
         <img
           src={require("../../assets/img/star-white-no-outline.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 10, height: 10, top: 380, left: 320 }}
         />
         <img
           src={require("../../assets/img/star-white-no-outline.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 10, height: 10, top: 400, left: 470 }}
         />
         <img
           src={require("../../assets/img/star-white-no-outline.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 10, height: 10, top: 210, right: 800 }}
         />
         <img
           src={require("../../assets/img/star-white-no-outline.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 10, height: 10, top: 500, left: 630 }}
         />
 
         <img
           src={require("../../assets/img/star-white-no-outline.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 10, height: 10, top: 700, left: 470 }}
         />
         <img
           src={require("../../assets/img/star-white-no-outline.png")}
-          className="absolute"
+          className="absolute stars-concl"
           style={{ width: 10, height: 10, top: 750, left: 320 }}
         />
 
@@ -805,6 +808,10 @@ const Home = () => {
         <img
           src={require("../../assets/img/projects/wtn-app.png")}
           className="absolute concl-wtn"
+        />
+        <img
+          src={require("../../assets/img/projects/wtn-app.png")}
+          className="absolute concl-wtn-mobile"
         />
         <img
           src={require("../../assets/img/antonin.jpeg")}
@@ -830,18 +837,18 @@ const Home = () => {
           </a>
         </div>
         <div>
-          <a href="#home" className="uppercase bottom-links">
+          <a href="#home" className="uppercase bottom-links section-links">
             Home
           </a>
-          <a href="#skills" className="uppercase bottom-links">
+          <a href="#skills" className="uppercase bottom-links section-links">
             Skills
           </a>
-          <a href="#projects" className="uppercase bottom-links">
+          <a href="#projects" className="uppercase bottom-links section-links">
             Projects
           </a>
           <a
             hhref="https://github.com/antonin187"
-            className="uppercase bottom-links"
+            className="uppercase bottom-links section-links"
           >
             Github
           </a>
