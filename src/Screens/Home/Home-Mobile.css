@@ -298,7 +298,7 @@
   .skill-separator {
     background-color: white;
     height: 1px;
-    width: 10%%;
+    width: 10%;
   }
   .skill-img-container {
     width: 100%;
@@ -465,7 +465,7 @@
   .damier-container > img {
     height: 100%;
   }
-  .damier-container > img: :nth-child(1) {
+  .damier-container > img:nth-child(1) {
     border: solid 2px blue;
   }
   .black-stars {
