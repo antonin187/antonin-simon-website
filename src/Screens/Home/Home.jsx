@@ -298,9 +298,7 @@ const Home = () => {
         <div className="text-container">
           <div className="title-container">
             <span className="whoami-text uppercase">Who</span>
-            <span className="whoami-text uppercase">
-              am I ?
-            </span>
+            <span className="whoami-text uppercase">am I ?</span>
             <div className="whoami-marks uppercase">
               <span className="whoami-mark" style={{ color: colors.blue }}>
                 ¿
@@ -631,25 +629,61 @@ const Home = () => {
         {/* STAR MOBILE */}
         <img
           className="black-stars star-mobile"
-          style={{ position: "absolute", left: 80, top: 119 }}
+          style={{ position: "absolute", left: 80, top: 90 }}
           src={require("../../assets/img/star-black-small.png")}
           alt=""
         />
         <img
           className="black-stars star-mobile"
-          style={{ position: "absolute", right: 80, top: 89 }}
+          style={{ position: "absolute", left: 40, top: 300 }}
           src={require("../../assets/img/star-black-small.png")}
           alt=""
         />
         <img
           className="black-stars star-mobile"
-          style={{ position: "absolute", left: 120, top: 530 }}
+          style={{ position: "absolute", right: 80, top: 120 }}
           src={require("../../assets/img/star-black-small.png")}
           alt=""
         />
         <img
           className="black-stars star-mobile"
-          style={{ position: "absolute", right: 80, bottom: 80 }}
+          style={{ position: "absolute", left: 50, top: 530 }}
+          src={require("../../assets/img/star-black-small.png")}
+          alt=""
+        />
+        <img
+          className="black-stars star-mobile"
+          style={{ position: "absolute", right: 40, top: 570 }}
+          src={require("../../assets/img/star-black-small.png")}
+          alt=""
+        />
+        <img
+          className="black-stars star-mobile"
+          style={{ position: "absolute", right: 130, top: 540 }}
+          src={require("../../assets/img/star-black-small.png")}
+          alt=""
+        />
+        <img
+          className="black-stars star-mobile"
+          style={{ position: "absolute", left: 120, bottom: 90 }}
+          src={require("../../assets/img/star-black-small.png")}
+          alt=""
+        />
+        <img
+          className="black-stars star-mobile"
+          style={{ position: "absolute", right: 50, bottom: 80 }}
+          src={require("../../assets/img/star-black-small.png")}
+          alt=""
+        />
+        <img
+          className="black-stars star-mobile"
+          style={{ position: "absolute", left: 30, bottom: 30 }}
+          src={require("../../assets/img/star-black-small.png")}
+          alt=""
+        />
+        <img
+          className="black-stars star-mobile"
+          style={{ position: "absolute", left: 220, bottom: 55 }}
           src={require("../../assets/img/star-black-small.png")}
           alt=""
         />
