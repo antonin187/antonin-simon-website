@@ -160,7 +160,7 @@ const Home = () => {
           top: "-60px",
         })
         .to(".concl-wtn-mobile", {
-          top: "100px",
+          top: "70px",
         });
     }, section); // <- Scope!
     return () => ctx.revert();
