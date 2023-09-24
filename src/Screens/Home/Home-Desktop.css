@@ -478,6 +478,7 @@
     transform: translate(-50%, -50%) scale(0) rotate(0);
   }
   .conclusion {
+    margin-top: -1000px;
     height: 95vh;
     display: flex;
     flex-direction: column;
@@ -546,8 +547,8 @@
     border-radius: 34px;
     width: 403.143px;
     height: 502.035px;
-    top: -380px;
-    left: -280px;
+    top: -480px;
+    left: -380px;
     transform: rotate(11.426deg);
   }
   .concl-wtn {
