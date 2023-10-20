@@ -504,7 +504,8 @@
   /* CONCLUSION */
 
   .conclusion {
-    padding-top: 120px;
+    /* padding-top: 120px; */
+    margin-top: -1000px;
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -578,8 +579,8 @@
     border-radius: 34px;
     aspect-ratio: 403.143 / 502.035;
     width: 300px;
-    top: -380px;
-    left: -280px;
+    top: -480px;
+    left: -380px;
     transform: rotate(11.426deg);
     z-index: -1;
   }
