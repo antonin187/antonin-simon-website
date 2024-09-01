@@ -273,6 +273,14 @@ const Home = () => {
     );
   };
 
+  const myAge = () => {
+    const birthday = new Date(2002, 2, 18);
+    const today = new Date();
+    const ageInMilliseconds = today - birthday;
+    const ageInYears = ageInMilliseconds / (1000 * 60 * 60 * 24 * 365.25); // Using 365.25 to account for leap years
+    return Math.floor(ageInYears); // Return the age as a whole number
+  }
+
   return (
     <div id="home" className="container" ref={section}>
       <section className="home-section center">
@@ -313,7 +321,7 @@ const Home = () => {
           </div>
           <div className="description-container">
             <span className="description-title-antonin">Antonin</span>
-            <span className="description-age">21</span>
+            <span className="description-age">{myAge()}</span>
             <span className="description-title-developer">Developer</span>
             <span className="description-title-basketball">Basketball</span>
           </div>
