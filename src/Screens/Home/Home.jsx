@@ -861,7 +861,7 @@ const Home = () => {
         />
       </div>
       <div className="bottom-navbar">
-        <div>
+        <div className="sub-bottom-navbar">
           <a
             href="https://www.linkedin.com/in/antonin-simon/"
             className="uppercase bottom-links"
