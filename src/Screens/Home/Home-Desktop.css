@@ -1,4 +1,4 @@
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1000px) {
   /* Styles à appliquer pour les écrans dont la largeur est supérieure ou égale à 769px */
 
   .home-section {
@@ -224,17 +224,48 @@
     /* z-index: 100; */
   }
 
+  .img-emoji-antonin {
+    /* background: url("../../assets/img/emojis/memoji.mp4");
+    background-size: cover;
+    background-repeat: no-repeat; */
+    transform: scale(1.2) rotate(2.4deg);
+    display: none;
+  }
+  .img-emoji-developer {
+    background: url("../../assets/img/emojis/laptop.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.2) rotate(-5.14deg);
+    display: none;
+    /* z-index: 50; */
+  }
+  .img-emoji-basketball {
+    background: url("../../assets/img/emojis/basketball.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: scale(1.2) rotate(4.3deg);
+    display: none;
+    /* z-index: 100; */
+  }
+
   /* ---------------- Skills CSS ---------------- */
   .display-skills {
     display: flex;
   }
   .skills-section {
     padding: 75px;
+    margin: 20px;
+    border-radius: 1.5%;
   }
   .skills-section-title {
     font-size: 100px;
     font-weight: 400;
     letter-spacing: -3.5px;
+  }
+  .skills-section-tip {
+    font-size: 10px;
+    letter-spacing: -0.5px;
+    display: none;
   }
   .skills-section-subtitle {
     font-size: 30px;
@@ -305,7 +336,7 @@
   }
 
   /* ---------------- Projects CSS ---------------- */
-  .projets-section {
+  .projects-section {
     padding: 75px;
   }
   .projects-section-title {

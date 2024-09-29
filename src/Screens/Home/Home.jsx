@@ -1,12 +1,13 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import "./Home-Desktop.css";
 import "./Home-Mobile.css";
+import "./Home-Tablet.css";
 import starBlue from "../../assets/img/star-blue.png";
 import starPink from "../../assets/img/star-pink.png";
 import starYellow from "../../assets/img/star-yellow.png";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import WhoAmI from "../WhoAmI/WhoAmI";
+import memojiVideo from "../../assets/img/emojis/memoji.mp4";
 import colors from "../../utils/colors";
 import starSVG from "../../assets/img/star-black-large.svg";
 
@@ -15,6 +16,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
   const section = useRef();
   const [isHovered, setIsHovered] = useState(false);
+  
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
@@ -53,7 +55,7 @@ const Home = () => {
           defaults: { duration: 1, ease: "esae-out" },
         })
         .to(
-          ".img-antonin",
+          ".img-antonin, .img-emoji-antonin",
           {
             opacity: 1,
             transform: "scale(1) rotate(2.4deg)",
@@ -81,7 +83,7 @@ const Home = () => {
             display: "none",
           }
         )
-        .to(".img-developer", {
+        .to(".img-developer, .img-emoji-developer", {
           opacity: 1,
           transform: "scale(1) rotate(-5.14deg)",
         })
@@ -103,7 +105,7 @@ const Home = () => {
         .to(".description-developer, .description-title-developer", {
           display: "none",
         })
-        .to(".img-basketball", {
+        .to(".img-basketball, .img-emoji-basketball", {
           opacity: 1,
           transform: "scale(1) rotate(4.3deg)",
         })
@@ -149,7 +151,7 @@ const Home = () => {
           defaults: { duration: 1, ease: "ease-out" },
         })
         .to(".concl-arosaje", {
-          top: "-60px",
+          top: "-100px",
           right: "-500px",
         })
         .to(".concl-antonin", {
@@ -169,33 +171,33 @@ const Home = () => {
   const skillCellHoverAnimation = (currentCell) => {
     switch (currentCell) {
       case "react":
-        gsap.to("body", { backgroundColor: colors.reactNative });
+        gsap.to("#skills", { backgroundColor: colors.reactNative });
         gsap.to(
-          ".skill-reactNative>div, .skill-springBoot>div, .skill-swift>div, .skill-illustrator>div, .skill-figma>div, .skills-section-title, .skills-section-subtitle",
+          ".skill-reactNative>div, .skill-nextjs>div, .skill-swift>div, .skill-illustrator>div, .skill-figma>div, .skills-section-title, .skills-section-subtitle",
           { color: "black" }
         );
         gsap.to(".skill-separator", { backgroundColor: "black" });
         gsap.to(
-          ".skill-img-reactNative, .skill-img-spring, .skill-img-swift, .skill-img-illustrator, .skill-img-figma",
+          ".skill-img-reactNative, .skill-img-nextjs, .skill-img-swift, .skill-img-illustrator, .skill-img-figma",
           { opacity: 0 }
         );
         gsap.to(".skill-img-react", { opacity: 1 });
         break;
       case "reactNative":
-        gsap.to("body", { backgroundColor: colors.reactNative });
+        gsap.to("#skills", { backgroundColor: colors.reactNative });
         gsap.to(
-          ".skill-react>div, .skill-springBoot>div, .skill-swift>div, .skill-illustrator>div, .skill-figma>div, .skills-section-title, .skills-section-subtitle",
+          ".skill-react>div, .skill-nextjs>div, .skill-swift>div, .skill-illustrator>div, .skill-figma>div, .skills-section-title, .skills-section-subtitle",
           { color: "black" }
         );
         gsap.to(".skill-separator", { backgroundColor: "black" });
         gsap.to(
-          ".skill-img-react, .skill-img-spring, .skill-img-swift, .skill-img-illustrator, .skill-img-figma",
+          ".skill-img-react, .skill-img-nextjs, .skill-img-swift, .skill-img-illustrator, .skill-img-figma",
           { opacity: 0 }
         );
         gsap.to(".skill-img-reactNative", { opacity: 1 });
         break;
-      case "spring":
-        gsap.to("body", { backgroundColor: colors.springBoot });
+      case "nextjs":
+        gsap.to("#skills", { backgroundColor: colors.nextjs });
         gsap.to(
           ".skill-react>div, .skill-reactNative>div, .skill-swift>div, .skill-illustrator>div, .skill-figma>div, .skills-section-title, .skills-section-subtitle",
           { color: "black" }
@@ -205,43 +207,43 @@ const Home = () => {
           ".skill-img-react, .skill-img-reactNative, .skill-img-swift, .skill-img-illustrator, .skill-img-figma",
           { opacity: 0 }
         );
-        gsap.to(".skill-img-spring", { opacity: 1 });
+        gsap.to(".skill-img-nextjs", { opacity: 1 });
         break;
       case "swift":
-        gsap.to("body", { backgroundColor: colors.swift });
+        gsap.to("#skills", { backgroundColor: colors.swift });
         gsap.to(
-          ".skill-react>div, .skill-reactNative>div, .skill-springBoot>div, .skill-illustrator>div, .skill-figma>div, .skills-section-title, .skills-section-subtitle",
+          ".skill-react>div, .skill-reactNative>div, .skill-nextjs>div, .skill-illustrator>div, .skill-figma>div, .skills-section-title, .skills-section-subtitle",
           { color: "black" }
         );
         gsap.to(".skill-separator", { backgroundColor: "black" });
         gsap.to(
-          ".skill-img-react, .skill-img-reactNative, .skill-img-spring, .skill-img-illustrator, .skill-img-figma",
+          ".skill-img-react, .skill-img-reactNative, .skill-img-nextjs, .skill-img-illustrator, .skill-img-figma",
           { opacity: 0 }
         );
         gsap.to(".skill-img-swift", { opacity: 1 });
         break;
       case "illustrator":
-        gsap.to("body", { backgroundColor: colors.illustrator });
+        gsap.to("#skills", { backgroundColor: colors.illustrator });
         gsap.to(
-          ".skill-react>div, .skill-reactNative>div, .skill-springBoot>div, .skill-swift>div, .skill-figma>div, .skills-section-title, .skills-section-subtitle",
+          ".skill-react>div, .skill-reactNative>div, .skill-nextjs>div, .skill-swift>div, .skill-figma>div, .skills-section-title, .skills-section-subtitle",
           { color: "black" }
         );
         gsap.to(".skill-separator", { backgroundColor: "black" });
         gsap.to(
-          ".skill-img-react, .skill-img-reactNative, .skill-img-spring, .skill-img-swift, .skill-img-figma",
+          ".skill-img-react, .skill-img-reactNative, .skill-img-nextjs, .skill-img-swift, .skill-img-figma",
           { opacity: 0 }
         );
         gsap.to(".skill-img-illustrator", { opacity: 1 });
         break;
       case "figma":
-        gsap.to("body", { background: colors.figma });
+        gsap.to("#skills", { background: colors.figma });
         gsap.to(
-          ".skill-react>div, .skill-reactNative>div, .skill-springBoot>div, .skill-swift>div, .skill-illustrator>div, .skills-section-title, .skills-section-subtitle",
+          ".skill-react>div, .skill-reactNative>div, .skill-nextjs>div, .skill-swift>div, .skill-illustrator>div, .skills-section-title, .skills-section-subtitle",
           { color: "black" }
         );
         gsap.to(".skill-separator", { backgroundColor: "black" });
         gsap.to(
-          ".skill-img-react, .skill-img-reactNative, .skill-img-spring, .skill-img-swift, .skill-img-illustrator",
+          ".skill-img-react, .skill-img-reactNative, .skill-img-nextjs, .skill-img-swift, .skill-img-illustrator",
           { opacity: 0 }
         );
         gsap.to(".skill-img-figma", { opacity: 1 });
@@ -253,22 +255,22 @@ const Home = () => {
 
   const skillCellOutAnimation = (isFigma) => {
     if (isFigma) {
-      gsap.to("body", { background: "black" });
+      gsap.to("#skills", { background: "black" });
       gsap.to(
-        ".skill-react>div, .skill-reactNative>div, .skill-springBoot>div, .skill-swift>div, .skill-illustrator>div, .skill-figma>div, .skills-section-title, .skills-section-subtitle",
+        ".skill-react>div, .skill-reactNative>div, .skill-nextjs>div, .skill-swift>div, .skill-illustrator>div, .skill-figma>div, .skills-section-title, .skills-section-subtitle",
         { color: "white" }
       );
       gsap.to(".skill-separator", { backgroundColor: "white" });
     } else {
-      gsap.to("body", { backgroundColor: "black" });
+      gsap.to("#skills", { backgroundColor: "black" });
       gsap.to(
-        ".skill-react>div, .skill-reactNative>div, .skill-springBoot>div, .skill-swift>div, .skill-illustrator>div, .skill-figma>div, .skills-section-title, .skills-section-subtitle",
+        ".skill-react>div, .skill-reactNative>div, .skill-nextjs>div, .skill-swift>div, .skill-illustrator>div, .skill-figma>div, .skills-section-title, .skills-section-subtitle",
         { color: "white" }
       );
       gsap.to(".skill-separator", { backgroundColor: "white" });
     }
     gsap.to(
-      ".skill-img-react, .skill-img-reactNative, .skill-img-spring, .skill-img-swift, .skill-img-illustrator, .skill-img-figma",
+      ".skill-img-react, .skill-img-reactNative, .skill-img-nextjs, .skill-img-swift, .skill-img-illustrator, .skill-img-figma",
       { opacity: 0 }
     );
   };
@@ -279,7 +281,7 @@ const Home = () => {
     const ageInMilliseconds = today - birthday;
     const ageInYears = ageInMilliseconds / (1000 * 60 * 60 * 24 * 365.25); // Using 365.25 to account for leap years
     return Math.floor(ageInYears); // Return the age as a whole number
-  }
+  };
 
   return (
     <div id="home" className="container" ref={section}>
@@ -349,6 +351,19 @@ const Home = () => {
           <div className="img-who-am-i img-antonin"></div>
           <div className="img-who-am-i img-developer"></div>
           <div className="img-who-am-i img-basketball"></div>
+
+          {/* <div className="img-who-am-i img-emoji-antonin"></div> */}
+          <video
+            autoPlay
+            muted
+            loop
+            className="img-who-am-i img-emoji-antonin"
+            controls
+          >
+            <source src={memojiVideo} type="video/mp4" />
+          </video>
+          <div className="img-who-am-i img-emoji-developer"></div>
+          <div className="img-who-am-i img-emoji-basketball"></div>
         </div>
       </section>
 
@@ -356,7 +371,7 @@ const Home = () => {
 
       {/* ------------ SKILLS ------------ */}
       <div id="skills" className="skills-section">
-        <div className="skills-section-title">Skills</div>
+        <div className="skills-section-title">Skills <span className="skills-section-tip">(Tap on each ones)</span></div>
         <div className="skills-section-subtitle">
           Some of the technologies I'm used to using.
         </div>
@@ -398,17 +413,15 @@ const Home = () => {
             </div>
             <div className="skill-separator"></div>
 
-            {/* SPRING BOOT */}
+            {/* NEXTJS */}
             <div
-              className="skill-container skill-springBoot"
+              className="skill-container skill-nextjs"
               onMouseOut={() => skillCellOutAnimation(false)}
-              onMouseOver={() => skillCellHoverAnimation("spring")}
+              onMouseOver={() => skillCellHoverAnimation("nextjs")}
             >
-              <div className="name-skill-title skill-cell-name">
-                Spring Boot
-              </div>
+              <div className="name-skill-title skill-cell-name">NextJs</div>
               <div className="description-skill-title skill-cell-descr">
-                Creation of databases and development of web services.
+                Frontend and backend developpement
               </div>
             </div>
             <div className="skill-separator"></div>
@@ -464,8 +477,8 @@ const Home = () => {
               className="skill-img-reactNative skill-img"
             ></img>
             <img
-              src={require("../../assets/img/skills/skill-spring.png")}
-              className="skill-img-spring skill-img"
+              src={require("../../assets/img/skills/skill-nextjs.png")}
+              className="skill-img-nextjs skill-img"
             ></img>
             <img
               src={require("../../assets/img/skills/skill-swift.png")}
@@ -484,7 +497,7 @@ const Home = () => {
       </div>
 
       {/* ------------ PROJECTS ------------ */}
-      <div id="projects" className="projets-section">
+      <div id="projects" className="projects-section">
         <div className="projects-section-title">Projects</div>
         {/* AROSAJE */}
         <div className="project-container">
@@ -878,7 +891,7 @@ const Home = () => {
             +33 6 26 77 13 01
           </a>
         </div>
-        <div>
+        <div className="sub-bottom-navbar-2">
           <a href="#home" className="uppercase bottom-links section-links">
             Home
           </a>

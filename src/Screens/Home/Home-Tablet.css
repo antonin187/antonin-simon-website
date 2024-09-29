@@ -1,3 +1,644 @@
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  /* Styles à appliquer pour les écrans dont la largeur est comprise entre 481px et 768px */
+@media screen and (min-width: 481px) and (max-width: 999px) {
+  
+  /* Styles à appliquer pour les écrans dont la largeur est inférieure ou égale à 480px */
+  .home-section {
+    background-color: #000000;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    /* margin-bottom: 100px; */
+  }
+  .antonin {
+    font-size: 100px;
+    letter-spacing: -5px;
+  }
+  .scroll-div {
+    position: absolute;
+    bottom: 40px;
+    height: 30vh;
+    width: max-content;
+    flex-direction: column;
+    font-size: 20px;
+  }
+
+  .scroll-indicator {
+    width: 22px;
+    height: 22px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    /* position: relative; */
+    animation: scrollAnimation 2s ease infinite;
+    margin-bottom: 50px;
+  }
+
+  @keyframes scrollAnimation {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(
+        20px
+      ); /* Ajustez la valeur pour définir l'amplitude de l'effet de scroll */
+    }
+  }
+
+  .starBlue {
+    width: 42px;
+    height: 43px;
+    position: absolute;
+    left: 320px;
+    top: 340px;
+    animation: rotateAnimation 7s linear infinite;
+  }
+  .starPink {
+    width: 42px;
+    height: 43px;
+    position: absolute;
+    left: 140px;
+    bottom: 310px;
+    animation: rotateAnimation 10s linear infinite reverse;
+  }
+  .starYellow {
+    width: 42px;
+    height: 44px;
+    position: absolute;
+    left: 100px;
+    top: 310px;
+    animation: rotateAnimation 8s linear infinite;
+  }
+
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+  /* .blur {
+    filter: blur(0px);
+  } */
+  .slider {
+    position: absolute;
+    /* background-color: #ff7b7b; */
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .big-letter {
+    font-size: 4.7rem;
+    letter-spacing: -5px;
+  }
+  .italic {
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: -5px;
+  }
+
+  .who-am-i2 {
+    background-color: #459cd5;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+  }
+  .who-am-i3 {
+    background-color: #5f27b4;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+  }
+  .who-am-i {
+    /* margin-top: 100px; */
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .text-container {
+    width: 100%;
+  }
+  .title-container {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .title-container > :nth-child(2) {
+    margin-left: 30px;
+  }
+  .whoami-text {
+    font-size: 100px;
+    font-weight: 400;
+    letter-spacing: -10px;
+    padding: 0rem;
+
+    display: inline-block;
+    vertical-align: top;
+    height: 0.8em;
+    line-height: 0.8em;
+  }
+  .whoami-marks {
+    font-size: 130px;
+    font-weight: 400;
+    letter-spacing: -10px;
+    margin-top: -200px;
+    margin-left: 100px;
+    z-index: -1;
+  }
+  .whoami-mark {
+    filter: blur(2px);
+  }
+  .description-container {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: -3.5px;
+    overflow: hidden;
+  }
+  .description-age {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: -1.5px;
+    align-self: flex-end;
+    margin-left: 30px;
+  }
+  .description-text-container {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 30px;
+    /* width: 720px; */
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -1.25px;
+    overflow: hidden;
+    /* height: 100px; */
+  }
+  .description-container > span {
+    position: relative;
+    top: 150px;
+  }
+  .description-text-container > span {
+    position: relative;
+    top: 180px;
+    display: none;
+  }
+  .img-container {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 260px;
+  }
+  .img-who-am-i {
+    position: absolute;
+    top: 190%;
+    aspect-ratio: 1 / 1;
+    width: 130px;
+    flex-shrink: 0;
+    background-position: center !important;
+    opacity: 0;
+  }
+  
+  .img-antonin {
+    background: url("../../assets/img/antonin.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.2) rotate(2.4deg);
+    display: none;
+  }
+  .img-developer {
+    background: url("../../assets/img/developper.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.2) rotate(-5.14deg);
+    display: none;
+  }
+  .img-basketball {
+    background: url("../../assets/img/basketball.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: scale(1.2) rotate(4.3deg);
+    display: none;
+  }
+
+  .img-emoji-antonin {
+    /* background: url("../../assets/img/emojis/memoji.mp4");
+    background-size: cover;
+    background-repeat: no-repeat; */
+    top: 170%;
+    width: 260px;
+    transform: scale(1.2) rotate(2.4deg);
+  }
+  .img-emoji-developer {
+    background: url("../../assets/img/emojis/laptop.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.2) rotate(-5.14deg);
+  }
+  .img-emoji-basketball {
+    background: url("../../assets/img/emojis/basketball.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: scale(1.2) rotate(4.3deg);
+  }
+
+  /* ---------------- Skills CSS ---------------- */
+  .skills-section {
+    margin-top: 50px;
+  }
+  .display-skills {
+    display: flex;
+    flex-direction: column;
+  }
+  .skills-section {
+    padding: 40px;
+  }
+  .skills-section-title {
+    font-size: 80px;
+    font-weight: 400;
+    letter-spacing: -3.5px;
+  }
+  .skills-section-tip {
+    font-size: 10px;
+    letter-spacing: -0.5px;
+  }
+  .skills-section-subtitle {
+    font-size: 20px;
+    font-weight: 200;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .skill-container {
+    display: flex;
+    /* flex-direction: column; */
+    width: 100%;
+  }
+  .name-skill-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    width: 50%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  .description-skill-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    width: 60%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  .skill-cell-name {
+    width: 50%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    /* border: #459cd5 solid 2px; */
+    font-size: 17px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .skill-cell-descr {
+    width: 60%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    /* border: #459cd5 solid 2px; */
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0px;
+  }
+  .skill-separator {
+    background-color: white;
+    height: 1px;
+    width: 100%;
+  }
+  .skill-img-container {
+    width: 100%;
+    /* display: none; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+  .skill-img {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    /* display: none; */
+  }
+
+  /* ---------------- Projects CSS ---------------- */
+  .projects-section {
+    padding: 0 40px;
+  }
+  .projects-section-title {
+    font-size: 80px;
+    font-weight: 400;
+    letter-spacing: -3.5px;
+  }
+  .project-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-container {
+    margin-top: 40px; /* Remplacez la valeur "20px" par la marge souhaitée */
+  }
+  .project-container:last-child {
+    margin-bottom: 200px;
+  }
+  .project-texts {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    order: 1;
+  }
+  .project-year {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.75px;
+  }
+  .project-name {
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: -3.5px;
+  }
+  .project-description {
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -1.25px;
+    margin-top: 30px;
+  }
+  .project-img {
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+  }
+  .project-img > img {
+    max-width: 100%;
+    border-radius: 7px;
+  }
+
+  .project-container > :nth-child(2) {
+    margin-left: 0px;
+  }
+
+  /* -------- GITHUB --------- */
+  .github-section {
+    height: 100vh;
+    background-color: white;
+    overflow: hidden;
+  }
+  .github-text-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .visit-my {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 400;
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+    text-stroke: 2px rgb(0, 0, 0);
+    height: 0.8em;
+    line-height: 0.8em;
+    transform: scale(3);
+  }
+  .github-title {
+    color: #000000;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 400;
+    letter-spacing: -5px;
+    height: 0.8em;
+    line-height: 0.8em;
+  }
+  .visit-texts {
+    text-align: center;
+    transform: scale(3.2);
+    margin-top: 230px;
+  }
+  .catch-it {
+    color: #000;
+    text-align: center;
+    font-family: Junicode;
+    font-size: 55px;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 1.65px;
+    margin-bottom: 50px;
+    opacity: 0;
+  }
+  .button-visit {
+    color: #000;
+    border-radius: 59px;
+    border: 3px solid #000;
+    width: 263px;
+    height: 80px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    transition: 0.25s ease;
+    opacity: 0;
+  }
+  .button-visit:hover {
+    background-color: #000;
+    color: white;
+  }
+  .damier-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    top: 0;
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .damier-container > img {
+    height: 100%;
+  }
+  .black-stars {
+    width: 15px;
+    height: 15px;
+    animation: rotateAnimation 8s linear infinite;
+    opacity: 0;
+  }
+  .star-desktop {
+    display: none;
+  }
+  .big-star-container {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    top: 0;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .big-star {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Les propriétés top et left à 50% placent le coin supérieur gauche de l'image
+       au milieu du parent. La propriété transform avec translate(-50%, -50%)
+       déplace l'image de moitié de sa largeur et moitié de sa hauteur vers la gauche et le haut,
+       ce qui la centre correctement dans son parent. */
+    max-width: 100%;
+    max-height: 100%;
+    transform: translate(-50%, -50%) scale(0) rotate(0);
+  }
+
+  /* CONCLUSION */
+
+  .conclusion {
+    /* padding-top: 120px; */
+    margin-top: -1000px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .conclusion-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: -3px;
+    margin-top: 100px;
+  }
+  .conclusion-title > span {
+    height: 0.9em;
+    line-height: 0.8em;
+  }
+  .conclusion-subtitle {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 100px 10px 20px 10px;
+  }
+  .button-email {
+    color: #ffffff;
+    border-radius: 59px;
+    border: 3px solid #ffffff;
+    width: 263px;
+    height: 80px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    transition: 0.25s ease;
+  }
+  .button-email:hover {
+    background-color: #ffffff;
+    color: black;
+  }
+  .bottom-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 10px 0;
+  }
+  .sub-bottom-navbar {
+    width: 100%;
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .bottom-links {
+    /* margin: 0 20px; */
+    text-decoration: none;
+    font-size: 10px;
+  }
+  .section-links {
+    display: none;
+  }
+  .absolute {
+    position: absolute;
+  }
+  .stars-concl {
+    display: none;
+  }
+  .concl-antonin {
+    border-radius: 34px;
+    aspect-ratio: 403.143 / 502.035;
+    width: 300px;
+    top: -480px;
+    left: -380px;
+    transform: rotate(11.426deg);
+    z-index: -1;
+  }
+  .concl-wtn {
+    display: none;
+  }
+  .concl-wtn-mobile {
+    /* aspect-ratio: 1; */
+    width: 120px;
+    height: 120px;
+    top: -300px;
+    left: 180px;
+    transform: rotate(-11.426deg);
+    z-index: -1;
+  }
+  .concl-arosaje {
+    border-radius: 34px;
+    aspect-ratio: 743 / 613;
+    width: 570px;
+    top: -260px;
+    right: -900px;
+    transform: rotate(-18.426deg);
+    z-index: -1;
+  }
 }
