@@ -882,7 +882,7 @@ const Home = () => {
             Linkedin
           </a>
           <a
-            href="https://www.instagram.com/antonin__simon/"
+            href="https://www.instagram.com/illbeanton/"
             className="uppercase bottom-links"
           >
             Instagram
